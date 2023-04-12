@@ -1,0 +1,1 @@
+export const languageGlogbal = (state: any) => state.constant;

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# pre-commit hook
+# Chạy các lệnh kiểm tra trước khi commit, ví dụ: lint, format code
+npm run lint
+npm run format
+
+# pre-push hook
+# Chạy các lệnh kiểm tra trước khi push, ví dụ: kiểm tra kiến trúc ứng dụng
+# npm run test:architecture
+
+# post-merge hook
+# Chạy các lệnh để xử lý sau khi merge, ví dụ: cập nhật dependencies
+npm install

@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import LayoutDefault from '../layout/default/index';
+import Self from '../pages/Selft';
 
 const Home = lazy(() => import('../pages/Home/index'));
 const NotFound = lazy(() => import('../pages/NotFound/index'));
@@ -8,8 +9,13 @@ const NotFound = lazy(() => import('../pages/NotFound/index'));
 function RouterContainer() {
   const dataRouter = [
     {
-      path: '/home',
+      path: '/',
       element: Home,
+      layout: LayoutDefault,
+    },
+    {
+      path: '/self',
+      element: Self,
       layout: LayoutDefault,
     },
     {

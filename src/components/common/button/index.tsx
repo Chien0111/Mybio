@@ -1,31 +1,34 @@
 import { Button, Tooltip } from '@mantine/core';
-import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { languageGlogbal } from '../../../store/select';
+import { drakModeGlogbal } from '../../../store/select';
+import { handleDrakMode } from '../../../store/slice/constant';
+import { Sun1, Moon } from 'iconsax-react';
 
 function ButtonCustoms() {
-  const [darkToggle, setDarkToggle] = useState<boolean>(true);
-  const count = useSelector((state: any) => state.constant.language);
+  const drakMode = useSelector(drakModeGlogbal);
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (darkToggle) {
-      localStorage.setItem('dark', 'true');
-    } else {
-      localStorage.removeItem('dark');
-    }
-    console.log('count', count);
-  }, [darkToggle]);
   return (
     <div>
-      <Tooltip label="Tooltip for disabled button" offset={-74}>
-        <Button
-          variant="default"
+      <Tooltip
+        label={`${drakMode ? 'Drak' : 'Bright'} `}
+        offset={-78}
+        classNames={{
+          tooltip: 'bg-transparent text-black',
+        }}
+      >
+        <div
+          className="w-[50px] text-center hover:cursor-pointer p-2"
           onClick={() => {
-            setDarkToggle(!darkToggle);
+            dispatch(handleDrakMode());
           }}
         >
-          {count}
-        </Button>
+          {drakMode ? (
+            <Moon size="32" color="rgb(253 224 71)" variant="Bold" />
+          ) : (
+            <Sun1 size="32" color="rgb(253 224 71)" variant="Bold" />
+          )}
+        </div>
       </Tooltip>
     </div>
   );

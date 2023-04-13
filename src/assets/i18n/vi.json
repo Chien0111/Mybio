@@ -3,5 +3,12 @@
     "functional": "Hàm",
     "class": "Lớp",
     "text": "Đây là văn bản"
+  },
+  "sidebar": {
+    "self": "Một chút về tôi",
+    "education": "Học vấn",
+    "experience": "Kinh nghiệm làm việc",
+    "hobbies": "Sở thích",
+    "target": "Mục tiêu nghề nghiệp"
   }
 }

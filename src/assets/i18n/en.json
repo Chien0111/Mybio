@@ -3,5 +3,12 @@
     "functional": "Functional",
     "class": "Class",
     "text": "This is text"
+  },
+  "sidebar": {
+    "self": "A little about me",
+    "education": "Education",
+    "experience": "Experience",
+    "hobbies": "Hobbies",
+    "target": "Career goals"
   }
 }

@@ -1,13 +1,12 @@
-import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import RouterContainer from './router/index';
+import { drakModeGlogbal } from './store/select';
 
 function App() {
-  const darkToggle = localStorage.getItem('dark');
-  useEffect(() => {
-    console.log('chiennx', darkToggle);
-  }, [darkToggle]);
+  const drakMode = useSelector(drakModeGlogbal);
+
   return (
-    <div className={`App ${darkToggle ? 'dark' : ''} `}>
+    <div className={`App ${drakMode ? 'dark' : ''} `}>
       <RouterContainer />
     </div>
   );

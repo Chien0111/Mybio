@@ -4,6 +4,7 @@ export const constantSlice = createSlice({
   name: 'constant',
   initialState: {
     language: 'Nguyen Xuan Chien',
+    drakMode: false,
   },
   reducers: {
     handleVI(state) {
@@ -12,5 +13,10 @@ export const constantSlice = createSlice({
     handleEN(state) {
       state.language = 'B';
     },
+    handleDrakMode(state) {
+      state.drakMode = !state.drakMode;
+    },
   },
 });
+
+export const { handleDrakMode } = constantSlice.actions;

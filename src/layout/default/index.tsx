@@ -1,19 +1,14 @@
-import { useTranslation } from 'react-i18next';
-import MenuI18n from '../../components/share/language/index';
-import ButtonCustoms from '../../components/common/button';
+import SideBar from '../../components/share/sideBar';
+import Header from './header';
 
 function LayoutDefault({ children }: any) {
-  const { t, i18n } = useTranslation();
-  const handleEnglishClick = () => {
-    i18n.changeLanguage('en');
-  };
   return (
-    <div>
-      Default
-      <button onClick={handleEnglishClick}>EN</button>
-      <MenuI18n />
-      <ButtonCustoms />
-      <div className="w-full h-full flex items-center justify-center">
+    <div className="flex bg-white dark:bg-gray-900 text-gray-900 rounded-lg dark:text-white">
+      <div className="w-80">
+        <SideBar />
+      </div>
+      <div className="w-full p-2">
+        <Header />
         {children}
       </div>
     </div>

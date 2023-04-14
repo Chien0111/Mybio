@@ -5,23 +5,28 @@
   animation: typing 4s steps(80);
 }
 .birth {
+  opacity: 0; /* Ẩn chữ */
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 4s steps(80);
-  animation-delay: 4s;
+  animation: appear 4s steps(80);
+  animation-delay: 4s; /* Đợi 4s trước khi chạy animation */
+  animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation khi hoàn thành */
 }
+
 @keyframes typing {
   from {
     width: 0;
     border-right: 2px solid;
   }
-  to {
-    width: 160px;
-  }
 }
 
-/* @keyframes blinking {
-  50% {
-    border-color: transparent;
+@keyframes appear {
+  from { /* Ẩn chữ */
+    width: 0;
+    border-right: 2px solid;
   }
-} */
+  to {
+    width: 160px;
+    opacity: 1; /* Hiển thị chữ */
+  }
+}

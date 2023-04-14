@@ -14,7 +14,7 @@ function ButtonCustoms() {
         label={`${drakMode ? 'Drak' : 'Bright'} `}
         offset={-78}
         classNames={{
-          tooltip: 'bg-transparent text-black',
+          tooltip: 'bg-transparent text-black dark:text-white',
         }}
       >
         <div

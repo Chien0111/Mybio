@@ -1,0 +1,18 @@
+.typing-animation {
+  overflow: hidden; /* Ẩn các ký tự bị tràn */
+  display: inline-block; /* Hiển thị văn bản trên một dòng */
+  animation-name: typing;
+  animation-duration: 1s;
+  animation-timing-function: steps(25);
+  animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation khi hoàn thành */
+  
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Bắt đầu với chiều rộng là 0 */
+  }
+  to {
+    width: 100%; /* Kết thúc với chiều rộng là 100% */
+  }
+}

@@ -5,7 +5,6 @@
   animation-duration: 1s;
   animation-timing-function: steps(25);
   animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation khi hoàn thành */
-  
 }
 
 @keyframes typing {

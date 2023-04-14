@@ -8,13 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn format",
-      "post-merge": "yarn"
-    }
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -22,14 +17,20 @@
     "@mantine/hooks": "^6.0.7",
     "@reduxjs/toolkit": "^1.9.3",
     "@tabler/icons-react": "^2.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
     "autoprefixer": "^10.4.14",
+    "babel-eslint": "^10.1.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "i18next": "^22.4.14",
     "i18next-http-backend": "^2.2.0",
     "iconsax-react": "^0.0.8",
+    "npm": "^9.6.4",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "react": "^18.2.0",

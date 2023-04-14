@@ -8,7 +8,7 @@ function TypingAnimation({ text }: any) {
     let currentIndex = 0;
     const intervalId = setInterval(() => {
       const nextChar = text[currentIndex];
-      setDisplayText(displayText => displayText + nextChar);
+      setDisplayText((displayText) => displayText + nextChar);
       currentIndex++;
       if (currentIndex === text.length) {
         clearInterval(intervalId);

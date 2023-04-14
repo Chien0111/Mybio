@@ -2,7 +2,7 @@ import { Image } from '@mantine/core';
 import './style.css';
 function AnimationImage(prop: any) {
   return (
-    <div >
+    <div>
       <div className="animationImage">
         <span></span>
         <span></span>

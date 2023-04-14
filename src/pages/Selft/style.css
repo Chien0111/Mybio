@@ -21,7 +21,8 @@
 }
 
 @keyframes appear {
-  from { /* Ẩn chữ */
+  from {
+    /* Ẩn chữ */
     width: 0;
     border-right: 2px solid;
   }
